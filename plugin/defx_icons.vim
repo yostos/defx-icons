@@ -6,16 +6,16 @@ let g:loaded_defx_icons = 1
 
 let s:enable_syntax_highlight = get(g:, 'defx_icons_enable_syntax_highlight', 1)
 let s:column_length = get(g:, 'defx_icons_column_length', 1)
-let s:parent_icon = get(g:, 'defx_icons_parent_icon', '')
-let s:directory_icon = get(g:, 'defx_icons_directory_icon', '')
+let s:parent_icon = get(g:, 'defx_icons_parent_icon', '')
+let s:directory_icon = get(g:, 'defx_icons_directory_icon', '')
 let s:mark_icon = get(g: , 'defx_icons_mark_icon', '*')
 let s:default_icon = get(g:, 'defx_icons_default_icon', '')
-let s:directory_symlink_icon = get(g:, 'defx_icons_directory_symlink_icon', '')
-let s:root_opened_tree_icon = get(g:, 'defx_icons_root_opened_tree_icon', '')
-let s:nested_closed_tree_icon = get(g: ,'defx_icons_nested_closed_tree_icon', '')
-let s:nested_opened_tree_icon = get(g: ,'defx_icons_nested_opened_tree_icon', '')
-let s:copy_icon = get(g:, 'defx_icons_copy_icon', '')
-let s:move_icon = get(g:, 'defx_icons_move_icon', '')
+let s:directory_symlink_icon = get(g:, 'defx_icons_directory_symlink_icon', '')
+let s:root_opened_tree_icon = get(g:, 'defx_icons_root_opened_tree_icon', '')
+let s:nested_closed_tree_icon = get(g: ,'defx_icons_nested_closed_tree_icon', '')
+let s:nested_opened_tree_icon = get(g: ,'defx_icons_nested_opened_tree_icon', '')
+let s:copy_icon = get(g:, 'defx_icons_copy_icon', '')
+let s:move_icon = get(g:, 'defx_icons_move_icon', '')
 let s:default_color = synIDattr(hlID('Normal'), 'fg')
 
 let s:gui_colors = extend({
@@ -57,24 +57,24 @@ let s:term_colors = extend({
       \ }, get(g: ,'defx_icons_term_colors', {}))
 
 let s:extensions = extend({
-      \ 'styl': {'icon': '', 'color': s:gui_colors.green, 'term_color': s:term_colors.green},
-      \ 'sass': {'icon': '', 'color': s:gui_colors.default, 'term_color': s:term_colors.default},
-      \ 'scss': {'icon': '', 'color': s:gui_colors.pink, 'term_color': s:term_colors.pink},
-      \ 'htm': {'icon': '', 'color': s:gui_colors.darkOrange, 'term_color': s:term_colors.darkOrange},
-      \ 'html': {'icon': '', 'color': s:gui_colors.darkOrange, 'term_color': s:term_colors.darkOrange},
+      \ 'styl': {'icon': '', 'color': s:gui_colors.green, 'term_color': s:term_colors.green},
+      \ 'sass': {'icon': '', 'color': s:gui_colors.default, 'term_color': s:term_colors.default},
+      \ 'scss': {'icon': 'tb', 'color': s:gui_colors.pink, 'term_color': s:term_colors.pink},
+      \ 'htm': {'icon': '', 'color': s:gui_colors.darkOrange, 'term_color': s:term_colors.darkOrange},
+      \ 'html': {'icon': '', 'color': s:gui_colors.darkOrange, 'term_color': s:term_colors.darkOrange},
       \ 'slim': {'icon': '', 'color': s:gui_colors.orange, 'term_color': s:term_colors.orange},
       \ 'ejs': {'icon': '', 'color': s:gui_colors.yellow, 'term_color': s:term_colors.yellow},
-      \ 'css': {'icon': '', 'color': s:gui_colors.blue, 'term_color': s:term_colors.blue},
-      \ 'less': {'icon': '', 'color': s:gui_colors.darkBlue, 'term_color': s:term_colors.darkBlue},
-      \ 'md': {'icon': '', 'color': s:gui_colors.yellow, 'term_color': s:term_colors.yellow},
-      \ 'markdown': {'icon': '', 'color': s:gui_colors.yellow, 'term_color': s:term_colors.yellow},
-      \ 'rmd': {'icon': '', 'color': s:gui_colors.default, 'term_color': s:term_colors.default},
-      \ 'json': {'icon': '', 'color': s:gui_colors.beige, 'term_color': s:term_colors.beige},
-      \ 'js': {'icon': '', 'color': s:gui_colors.beige, 'term_color': s:term_colors.beige},
-      \ 'mjs': {'icon': '', 'color': s:gui_colors.beige, 'term_color': s:term_colors.beige},
+      \ 'css': {'icon': '', 'color': s:gui_colors.blue, 'term_color': s:term_colors.blue},
+      \ 'less': {'icon': '', 'color': s:gui_colors.darkBlue, 'term_color': s:term_colors.darkBlue},
+      \ 'md': {'icon': '', 'color': s:gui_colors.yellow, 'term_color': s:term_colors.yellow},
+      \ 'markdown': {'': '', 'color': s:gui_colors.yellow, 'term_color': s:term_colors.yellow},
+      \ 'rmd': {'icon': '', 'color': s:gui_colors.default, 'term_color': s:term_colors.default},
+      \ 'json': {'icon': '󿬥', 'color': s:gui_colors.beige, 'term_color': s:term_colors.beige},
+      \ 'js': {'icon': '', 'color': s:gui_colors.beige, 'term_color': s:term_colors.beige},
+      \ 'mjs': {'icon': '', 'color': s:gui_colors.beige, 'term_color': s:term_colors.beige},
       \ 'jsx': {'icon': '', 'color': s:gui_colors.blue, 'term_color': s:term_colors.blue},
-      \ 'rb': {'icon': '', 'color': s:gui_colors.red, 'term_color': s:term_colors.red},
-      \ 'php': {'icon': '', 'color': s:gui_colors.purple, 'term_color': s:term_colors.purple},
+      \ 'rb': {'icon': '', 'color': s:gui_colors.red, 'term_color': s:term_colors.red},
+      \ 'php': {'icon': '', 'color': s:gui_colors.purple, 'term_color': s:term_colors.purple},
       \ 'py': {'icon': '', 'color': s:gui_colors.yellow, 'term_color': s:term_colors.yellow},
       \ 'pyc': {'icon': '', 'color': s:gui_colors.yellow, 'term_color': s:term_colors.yellow},
       \ 'pyo': {'icon': '', 'color': s:gui_colors.yellow, 'term_color': s:term_colors.yellow},
@@ -147,7 +147,7 @@ let s:extensions = extend({
       \ 'exs': {'icon': '', 'color': s:gui_colors.lightPurple, 'term_color': s:term_colors.lightPurple},
       \ 'eex': {'icon': '', 'color': s:gui_colors.lightPurple, 'term_color': s:term_colors.lightPurple},
       \ 'hrl': {'icon': '', 'color': s:gui_colors.pink, 'term_color': s:term_colors.pink},
-      \ 'vim': {'icon': '', 'color': s:gui_colors.green, 'term_color': s:term_colors.green},
+      \ 'vim': {'icon': '', 'color': s:gui_colors.green, 'term_color': s:term_colors.green},
       \ 'ai': {'icon': '', 'color': s:gui_colors.darkOrange, 'term_color': s:term_colors.darkOrange},
       \ 'psd': {'icon': '', 'color': s:gui_colors.darkBlue, 'term_color': s:term_colors.darkBlue},
       \ 'psb': {'icon': '', 'color': s:gui_colors.darkBlue, 'term_color': s:term_colors.darkBlue},
@@ -171,10 +171,10 @@ let s:exact_matches = extend({
       \ '.gitignore': {'icon': '', 'color': s:gui_colors.default, 'term_color': s:term_colors.default},
       \ '.bashrc': {'icon': '', 'color': s:gui_colors.default, 'term_color': s:term_colors.default},
       \ '.zshrc': {'icon': '', 'color': s:gui_colors.default, 'term_color': s:term_colors.default},
-      \ '.vimrc': {'icon': '', 'color': s:gui_colors.default, 'term_color': s:term_colors.default},
-      \ '.gvimrc': {'icon': '', 'color': s:gui_colors.default, 'term_color': s:term_colors.default},
-      \ '_vimrc': {'icon': '', 'color': s:gui_colors.default, 'term_color': s:term_colors.default},
-      \ '_gvimrc': {'icon': '', 'color': s:gui_colors.default, 'term_color': s:term_colors.default},
+      \ '.vimrc': {'icon': '', 'color': s:gui_colors.default, 'term_color': s:term_colors.default},
+      \ '.gvimrc': {'icon': '', 'color': s:gui_colors.default, 'term_color': s:term_colors.default},
+      \ '_vimrc': {'icon': '', 'color': s:gui_colors.default, 'term_color': s:term_colors.default},
+      \ '_gvimrc': {'icon': '', 'color': s:gui_colors.default, 'term_color': s:term_colors.default},
       \ '.bashprofile': {'icon': '', 'color': s:gui_colors.default, 'term_color': s:term_colors.default},
       \ 'favicon.ico': {'icon': '', 'color': s:gui_colors.yellow, 'term_color': s:term_colors.yellow},
       \ 'license': {'icon': '', 'color': s:gui_colors.default, 'term_color': s:term_colors.default},
@@ -193,7 +193,7 @@ let s:pattern_matches = extend({
       \ '.*materialize.*\.js$': {'icon': '', 'color': s:gui_colors.salmon, 'term_color': s:term_colors.salmon},
       \ '.*materialize.*\.css$': {'icon': '', 'color': s:gui_colors.salmon, 'term_color': s:term_colors.salmon},
       \ '.*mootools.*\.js$': {'icon': '', 'color': s:gui_colors.default, 'term_color': s:term_colors.default},
-      \ '.*vimrc.*': {'icon': '', 'color': s:gui_colors.default, 'term_color': s:term_colors.default},
+      \ '.*vimrc.*': {'icon': '', 'color': s:gui_colors.default, 'term_color': s:term_colors.default},
       \ 'Vagrantfile$': {'icon': '', 'color': s:gui_colors.default, 'term_color': s:term_colors.default},
       \ }, get(g:, 'defx_icon_pattern_matches', {}))
 
